@@ -155,6 +155,19 @@
       // Show the selected certificate
       document.getElementById(id).style.display = 'block';
     }
+
+    // Hide certificates when clicking outside
+    document.addEventListener('click', function(event) {
+    const certs = document.querySelectorAll('.certificate');
+    const links = document.querySelectorAll('a');
+
+
+    // If click is not on a certificate or a link, hide all certificates
+    if (![...certs].some(cert => cert.contains(event.target)) &&
+    ![...links].some(link => link.contains(event.target))) {
+      certs.forEach(cert => cert.style.display = 'none');
+    }
+    });
   </script>
 
   <footer>
