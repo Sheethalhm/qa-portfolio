@@ -54,3 +54,22 @@ footer {
   padding: 1rem 1rem;
   text-align: center;
 }
+
+a {
+color: blue;
+text-decoration: underline;
+cursor: pointer;
+}
+.certificate {
+display: none;
+margin-top: 20px;
+border: 1px solid #ccc;
+padding: 10px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+max-width: 600px;
+}
+.certificate img {
+width: 100%;
+height: auto;
+display: block;
+}

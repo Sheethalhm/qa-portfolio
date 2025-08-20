@@ -118,8 +118,14 @@
     <h2>Certifications</h2>
     <ul>
       <li><a href="https://bcert.me/bc/html/show-badge.html?b=apnwcdkc" target="_blank">Certified Scrum Product Owner</a></li>
-      <li><a href="https://www.linkedin.com/in/sheethalhm/details/certifications/1717692194182/single-media-viewer/?profileId=ACoAAA1Lkq4BQNgG1TnqJklYIrazSk-LbXw0p2M" target="_blank"> ISTQB Certified Tester Advanced Level Test Automation Engineer</a></li>
-      <li><a href="https://www.linkedin.com/in/sheethalhm/details/certifications/1717692271220/single-media-viewer/?profileId=ACoAAA1Lkq4BQNgG1TnqJklYIrazSk-LbXw0p2M" target="_blank"> ISTQB Certified Tester Foundation Level</a></li>
+      <li><a onclick="showCertificate('istqbadv')"> ISTQB Certified Tester Advanced Level Test Automation Engineer</a></li>
+      <li><a onclick="showCertificate('istqbf')">ISTQB Certified Tester Foundation Level</a></li>
+      <div class="certificate" id="istqbadv">
+        <img src="images/ISTQB_Advanced_Automation_Test_Engineer.png" alt="Preview 1">
+      </div>
+      <div class="certificate" id="istqbf">
+        <img src="images/ISTQB_Foundation_Level_Certified_Tester.png" alt="Preview 2">
+      </div>
       <!-- Add more certification links here -->
     </ul>
   <section id="blogs">
@@ -138,6 +144,18 @@
       <li><strong>Search Feature:</strong> Edge cases, blank input, special characters</li>
     </ul>
   </section> -->
+
+  <script>
+    function showCertificate(id) {
+      // Hide all certificates first
+      const allCerts = document.querySelectorAll('.certificate');
+      allCerts.forEach(cert => cert.style.display = 'none');
+
+
+      // Show the selected certificate
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
 
   <footer>
     <p id="contact">
